@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
   },
   extends: ['airbnb', 'prettier'],
-  plugins: ['prettier'],
+  plugins: ['prettier', 'react', 'react-hooks'],
   overrides: [
     {
       env: {
@@ -33,5 +33,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     'no-nested-ternary': 'off',
     'no-shadow': 'off',
+    'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/rules-of-hooks': 'error',
   },
 };

@@ -1,11 +1,9 @@
 import React from 'react';
 
-function App() {
+export default function Login() {
   return (
     <div>
-      <h1>App</h1>
+      <h1>Login</h1>
     </div>
   );
 }
-
-export default App;

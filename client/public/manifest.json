@@ -1,8 +1,11 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "start_url": ".",
+  "name": "Moovies",
+  "short_name": "Moovies",
+  "description": "Moovies é um aplicativo de cadastro de filmes em que usuários podem se cadastrar e cadastrar seus filmes.",
+  "start_url": "/",
+  "id": "com.lucassmaniotto.moovies",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "orientation": "portrait"
 }
