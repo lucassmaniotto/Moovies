@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { primaryColor, primaryDarkColor } from './UI/variables';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -7,6 +8,11 @@ const GlobalStyle = createGlobalStyle`
     outline: none;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+  }
+
+  body {
+    background: ${primaryDarkColor};
+    color: ${primaryDarkColor};
   }
 
   #root {
@@ -22,12 +28,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   button {
-    background-color: transparent;
+    background-color: ${primaryColor};
     cursor: pointer;
   }
 
   a {
     text-decoration: none;
+    color: ${primaryColor};
   }
 
   li {
