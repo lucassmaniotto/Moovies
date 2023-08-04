@@ -12,8 +12,10 @@ function AppRoutes() {
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<DefaultPage />} />
-          <Route index element={<Login />} />
+          <Route path="/" element={<DefaultPage />}>
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Login />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { primaryColor, primaryDarkColor } from '../variables';
 
 const Container = styled.main`
   display: flex;
@@ -8,11 +7,6 @@ const Container = styled.main`
   justify-content: center;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(
-    30deg,
-    ${primaryColor} 0%,
-    ${primaryDarkColor} 100%
-  );
 `;
 
 const H1 = styled.h1`

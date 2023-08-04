@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { primaryColor, primaryDarkColor } from './UI/variables';
+import { primaryColor, primaryDarkColor, whiteColor } from './UI/variables';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -11,7 +11,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: ${primaryDarkColor};
+    background: linear-gradient(
+      30deg,
+      ${primaryColor} 0%,
+      ${primaryDarkColor} 100%
+      );
     color: ${primaryDarkColor};
   }
 
@@ -45,6 +49,23 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 700;
     line-height: 5rem;
   }
+  ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px ${primaryColor};
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: ${primaryDarkColor};
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: ${whiteColor};
+    }
 `;
 
 export default GlobalStyle;
