@@ -5,6 +5,7 @@ import {
   ButtonContainer,
   Content,
   Image,
+  ImageContainer,
   Text,
   TextError404,
   Title,
@@ -28,7 +29,9 @@ export default function NotFound() {
           <LargeButton>Voltar</LargeButton>
         </ButtonContainer>
       </Content>
-      <Image src={error404} alt="Cow" />
+      <ImageContainer>
+        <Image src={error404} alt="Vaca com olho arregalado" />
+      </ImageContainer>
     </Container>
   );
 }

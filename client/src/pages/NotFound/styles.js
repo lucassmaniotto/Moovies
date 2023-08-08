@@ -79,6 +79,12 @@ const ButtonContainer = styled.div`
   margin-top: 3rem;
 `;
 
+const ImageContainer = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+`;
+
 const Image = styled.img`
   position: absolute;
   bottom: 0;
@@ -93,4 +99,12 @@ const Image = styled.img`
   }
 `;
 
-export { Content, TextError404, Title, Text, ButtonContainer, Image };
+export {
+  Content,
+  TextError404,
+  Title,
+  Text,
+  ButtonContainer,
+  Image,
+  ImageContainer,
+};
