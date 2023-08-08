@@ -5,6 +5,7 @@ import GlobalStyle from './components/GlobalStyles';
 import DefaultPage from './components/DefaultPage';
 
 import Login from './pages/Login';
+import NotFound from './pages/NotFound';
 
 function AppRoutes() {
   return (
@@ -15,6 +16,7 @@ function AppRoutes() {
           <Route path="/" element={<DefaultPage />}>
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Login />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>

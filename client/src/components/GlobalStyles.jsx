@@ -1,5 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
-import { primaryColor, primaryDarkColor, whiteColor } from './UI/variables';
+import {
+  primaryColor,
+  primaryDarkColor,
+  textFont,
+  whiteColor,
+} from './UI/variables';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -7,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     outline: none;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: ${textFont};
   }
 
   body {

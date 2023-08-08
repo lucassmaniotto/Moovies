@@ -30,6 +30,10 @@ const HeaderWrapper = styled.header`
       height: 24px;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 export default HeaderWrapper;
