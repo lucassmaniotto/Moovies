@@ -17,6 +17,7 @@ const Button = styled.button`
     background-color: ${primaryColor};
     border: 3px solid ${primaryColor};
     transition: 0.5s;
+    box-shadow: 0 0 20px 0.25rem ${primaryDarkColor};
   }
 `;
 
