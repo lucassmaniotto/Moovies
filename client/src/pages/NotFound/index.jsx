@@ -12,7 +12,7 @@ import {
 } from './styles';
 
 import error404 from '../../assets/error_404.png';
-import LargeButton from '../../components/Button/LargeButton';
+import Button from '../../components/Button';
 
 export default function NotFound() {
   const navegate = useNavigate();
@@ -26,7 +26,9 @@ export default function NotFound() {
           instantes e recarregue a página ou volte para a página inicial.
         </Text>
         <ButtonContainer onClick={() => navegate(-1)}>
-          <LargeButton>Voltar</LargeButton>
+          <Button padding="1.25rem 2.5rem" fontSize="1.5rem">
+            Voltar
+          </Button>
         </ButtonContainer>
       </Content>
       <ImageContainer>

@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+
+import Button from '../../components/Button';
 import {
   Container,
   H1,
@@ -16,9 +18,14 @@ export default function Login() {
           <H1>Bem vindo ao Moovies🐮</H1>
           <H2>Entre com sua conta:</H2>
         </DivTitle>
-        <button onClick={() => navigate('/private/logged')} type="button">
+        <Button
+          onClick={() => navigate('/private/logged')}
+          type="button"
+          padding="0.5rem 1.25rem"
+          fontSize="1.1rem"
+        >
           Login
-        </button>
+        </Button>
         <p>Ou registre-se abaixo:</p>
         <StyledLink to="/register">Registre-se</StyledLink>
       </WrapStyled>
