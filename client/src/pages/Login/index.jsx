@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Container,
   H1,
@@ -7,6 +8,7 @@ import {
 import { DivTitle, StyledLink, WrapStyled } from './styles';
 
 export default function Login() {
+  const navigate = useNavigate();
   return (
     <Container>
       <WrapStyled>
@@ -14,7 +16,9 @@ export default function Login() {
           <H1>Bem vindo ao Moovies🐮</H1>
           <H2>Entre com sua conta:</H2>
         </DivTitle>
-        <form />
+        <button onClick={() => navigate('/private/logged')} type="button">
+          Login
+        </button>
         <p>Ou registre-se abaixo:</p>
         <StyledLink to="/register">Registre-se</StyledLink>
       </WrapStyled>
