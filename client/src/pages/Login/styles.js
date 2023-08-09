@@ -22,6 +22,14 @@ export const WrapStyled = styled.div`
     margin-top: 2rem;
     margin-bottom: 0.5rem;
   }
+
+  @media screen and (max-width: 468px) {
+    width: 100%;
+
+    p {
+      font-size: 0.75rem;
+    }
+  }
 `;
 
 export const DivTitle = styled.div`
@@ -29,8 +37,37 @@ export const DivTitle = styled.div`
   flex-direction: column;
   align-items: center;
 
+  h1,
   h2 {
     align-self: flex-start;
+  }
+
+  @media screen and (max-width: 468px) {
+    width: 100%;
+
+    h1,
+    h2 {
+      height: 10%;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 346px) {
+    width: 100%;
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 0.85rem;
+    }
   }
 `;
 
