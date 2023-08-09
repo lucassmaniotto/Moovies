@@ -1,8 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 import 'react-toastify/dist/ReactToastify.css';
 import {
+  errorColor,
   primaryColor,
   primaryDarkColor,
+  successColor,
   textFont,
   whiteColor,
 } from './UI/variables';
@@ -55,23 +57,32 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 700;
     line-height: 5rem;
   }
+
   ::-webkit-scrollbar {
         width: 5px;
     }
 
-    ::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px ${primaryColor};
-        border-radius: 10px;
-    }
+  ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px ${primaryColor};
+      border-radius: 10px;
+  }
 
-    ::-webkit-scrollbar-thumb {
-        background: ${primaryDarkColor};
-        border-radius: 10px;
-    }
+  ::-webkit-scrollbar-thumb {
+      background: ${primaryDarkColor};
+      border-radius: 10px;
+  }
 
-    ::-webkit-scrollbar-thumb:hover {
-        background: ${whiteColor};
-    }
+  ::-webkit-scrollbar-thumb:hover {
+      background: ${whiteColor};
+  }
+
+  body .Toastify .Toastify__toast-container .Toastify__toast--success {
+    background: ${successColor};
+  }
+
+  body .Toastify .Toastify__toast-container .Toastify__toast--error {
+    background: ${errorColor};
+  }
 `;
 
 export default GlobalStyle;
