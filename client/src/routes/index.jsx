@@ -7,20 +7,18 @@ import DefaultPage from '../components/DefaultPage';
 import Login from '../pages/Login';
 import NotFound from '../pages/NotFound';
 import Home from '../pages/Home';
+import Logged from '../pages/Logged';
 
 function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<DefaultPage />}>
-          <Route index path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="login" element={<Login />} />
-          <Route path="register" element={<Login />} />
+          <Route path="register" element={<Home />} />
           <Route path="private" element={<PrivateRoute />}>
-            <Route
-              path="logged"
-              element={<h1 style={{ marginTop: '100px' }}>Logged</h1>}
-            />
+            <Route path="logged" element={<Logged />} />
             <Route path="*" element={<NotFound />} />
           </Route>
           <Route path="*" element={<NotFound />} />

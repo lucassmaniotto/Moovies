@@ -1,10 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 import 'react-toastify/dist/ReactToastify.css';
 import {
-  errorColor,
   primaryColor,
   primaryDarkColor,
-  successColor,
   textFont,
   whiteColor,
 } from './UI/variables';
@@ -74,14 +72,6 @@ const GlobalStyle = createGlobalStyle`
 
   ::-webkit-scrollbar-thumb:hover {
       background: ${whiteColor};
-  }
-
-  body .Toastify .Toastify__toast-container .Toastify__toast--success {
-    background: ${successColor};
-  }
-
-  body .Toastify .Toastify__toast-container .Toastify__toast--error {
-    background: ${errorColor};
   }
 `;
 
