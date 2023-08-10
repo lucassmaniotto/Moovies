@@ -5,9 +5,11 @@ import { toast } from 'react-toastify';
 import { AiOutlineMail } from 'react-icons/ai';
 import { MdOutlineLock } from 'react-icons/md';
 
+import { login } from '../../store/modules/auth/actions';
+
+import Input from './Input';
 import Button from '../Button';
 import StyledForm from './styles';
-import Input from './Input';
 
 function Form() {
   const navigate = useNavigate();
@@ -24,7 +26,7 @@ function Form() {
       return toast.error('Senha é obrigatória');
     }
     if (token) {
-      dispatch({ type: 'LOGIN' });
+      dispatch(login());
       return navigate('/private/logged');
     }
     return toast.error('Verifique suas credenciais');

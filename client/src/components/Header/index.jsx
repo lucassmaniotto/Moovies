@@ -1,20 +1,22 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux'; // Import useDispatch
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { FaHome } from 'react-icons/fa';
 import { FiLogIn, FiLogOut } from 'react-icons/fi';
 
+import { logout } from '../../store/modules/auth/actions';
+
 import HeaderWrapper from './styles';
 
 export default function Header() {
-  const isLogged = useSelector((state) => state.logged);
+  const isLogged = useSelector((state) => state.auth.logged);
   const dispatch = useDispatch();
 
   const handleLogout = () => {
     localStorage.removeItem('token');
     toast.info('Volte sempre!');
-    dispatch({ type: 'LOGOUT' });
+    dispatch(logout());
   };
 
   return (
