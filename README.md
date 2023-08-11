@@ -5,7 +5,7 @@ CRUD Fullstack desenvolvido em ReactJS, NodeJS e integração com Microsoft SQL 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
 | :sparkles: Nome        | **Moovies 🐮**
-| :label: Tecnologias | javascript, html, styled-components, npm, reactjs, nodejs, express, sequelize, eslint, mssql, insomnia, vercel
+| :label: Tecnologias | reactjs, nodejs, html, styled-components, npm,  express, sequelize, eslint, mssql, insomnia, vercel
 | :rocket: URL         | https://moovies-zeta.vercel.app/
 
 ## Detalhes do projeto
