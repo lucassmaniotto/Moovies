@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import { AiOutlineMail } from 'react-icons/ai';
 import { MdOutlineLock } from 'react-icons/md';
 
-import { login } from '../../store/modules/auth/actions';
+import { loginRequest } from '../../store/modules/auth/actions';
 
 import Input from './Input';
 import Button from '../Button';
@@ -15,9 +15,19 @@ function Form() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const handleSubmit = (event) => {
+  const dispatchLogin = async () => {
+    try {
+      dispatch(loginRequest());
+      toast.success('Login efetuado com sucesso!');
+      return navigate('/private/logged');
+    } catch (err) {
+      toast.error('Falha na autenticação, verifique seus dados');
+      throw new Error('Authentication failed');
+    }
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const token = localStorage.getItem('token');
 
     if (!document.getElementById('email').value) {
       return toast.error('E-mail é obrigatório');
@@ -25,11 +35,8 @@ function Form() {
     if (!document.getElementById('password').value) {
       return toast.error('Senha é obrigatória');
     }
-    if (token) {
-      dispatch(login());
-      return navigate('/private/logged');
-    }
-    return toast.error('Verifique suas credenciais');
+
+    return dispatchLogin();
   };
 
   return (
