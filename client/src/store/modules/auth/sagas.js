@@ -1,10 +1,9 @@
-/* eslint-disable no-unused-vars */
 import { call, put, all, takeLatest } from 'redux-saga/effects';
 import * as actions from './actions';
 import * as types from '../types';
 
 const request = () =>
-  new Promise((resolve, reject) => {
+  new Promise((resolve) => {
     localStorage.setItem('token', 'test');
     resolve();
   });
