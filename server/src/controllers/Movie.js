@@ -59,9 +59,10 @@ class MovieController {
 
   async create(req, res) {
     try {
-      const movie = await Movie.create(req.body);
-      return res.json(movie);
+      const newMovie = await Movie.create(req.body);
+      return res.json(newMovie);
     } catch (error) {
+      console.log(error);
       return res.status(400).json({
         errors: error.errors.map((err) => err.message),
       });
