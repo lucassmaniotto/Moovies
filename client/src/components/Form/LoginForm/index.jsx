@@ -5,10 +5,10 @@ import { toast } from 'react-toastify';
 import { AiOutlineMail } from 'react-icons/ai';
 import { MdOutlineLock } from 'react-icons/md';
 
-import { loginRequest } from '../../store/modules/auth/actions';
+import { loginRequest } from '../../../store/modules/auth/actions';
 
-import Input from './Input';
-import Button from '../Button';
+import Input from '../../Input';
+import Button from '../../Button';
 import StyledForm from './styles';
 
 function Form() {

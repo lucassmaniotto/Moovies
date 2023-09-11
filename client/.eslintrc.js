@@ -36,5 +36,6 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     'react-hooks/rules-of-hooks': 'error',
     'default-param-last': 'off',
+    'react/jsx-no-bind': 'off',
   },
 };

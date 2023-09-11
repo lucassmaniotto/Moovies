@@ -1,5 +1,5 @@
 import React from 'react';
-import LoginForm from '../../components/LoginForm';
+import Form from '../../components/Form/LoginForm';
 import {
   Container,
   H1,
@@ -15,7 +15,7 @@ export default function Login() {
           <H1>Bem vindo ao Moovies🐮</H1>
           <H2>Entre com sua conta:</H2>
         </DivTitle>
-        <LoginForm />
+        <Form />
         <p>Ou registre-se abaixo:</p>
         <StyledLink to="/register">Registre-se</StyledLink>
       </WrapStyled>

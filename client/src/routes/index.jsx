@@ -4,9 +4,10 @@ import PrivateRoute from './PrivateRoute';
 
 import DefaultPage from '../components/DefaultPage';
 
-import Login from '../pages/Login';
-import NotFound from '../pages/NotFound';
 import Home from '../pages/Home';
+import Login from '../pages/Login';
+import Register from '../pages/Register';
+import NotFound from '../pages/NotFound';
 import Logged from '../pages/Logged';
 
 function AppRoutes() {
@@ -16,7 +17,7 @@ function AppRoutes() {
         <Route path="/" element={<DefaultPage />}>
           <Route path="/" element={<Home />} />
           <Route path="login" element={<Login />} />
-          <Route path="register" element={<Home />} />
+          <Route path="register" element={<Register />} />
           <Route path="private" element={<PrivateRoute />}>
             <Route path="logged" element={<Logged />} />
             <Route path="*" element={<NotFound />} />

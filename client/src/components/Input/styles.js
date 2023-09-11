@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { greyColor, primaryColor } from '../../UI/variables';
+import { greyColor, primaryColor } from '../UI/variables';
 
 export const Div = styled.div`
   display: flex;
