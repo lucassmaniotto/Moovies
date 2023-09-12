@@ -15,12 +15,18 @@ export const WrapStyled = styled.div`
   border-radius: 10px;
   background-color: ${whiteColor};
   padding: 2rem;
+  width: 50%;
+  margin: 5rem auto 0 auto;
 
   p {
     font-size: 0.85rem;
     letter-spacing: 0.05rem;
     margin-top: 2rem;
     margin-bottom: 0.5rem;
+  }
+
+  @media screen and (max-width: 975px) {
+    width: 80%;
   }
 
   @media screen and (max-width: 468px) {
@@ -42,9 +48,14 @@ export const DivTitle = styled.div`
     align-self: flex-start;
   }
 
-  @media screen and (max-width: 468px) {
+  @media screen and (max-width: 583px) {
     width: 100%;
+    h1 {
+      font-size: 1.9rem;
+    }
+  }
 
+  @media screen and (max-width: 468px) {
     h1,
     h2 {
       height: 10%;

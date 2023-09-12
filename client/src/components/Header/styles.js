@@ -5,11 +5,6 @@ const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   padding: 0 1rem;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 1;
   background-color: ${primaryDarkColor};
   color: ${whiteColor};
 
@@ -33,14 +28,6 @@ const HeaderWrapper = styled.header`
 
   @media screen and (max-width: 768px) {
     justify-content: center;
-  }
-
-  @media screen and (max-width: 375px) {
-    position: relative;
-  }
-
-  @media screen and (max-height: 781px) {
-    position: relative;
   }
 `;
 
