@@ -19,7 +19,9 @@ function AppRoutes() {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="private" element={<PrivateRoute />}>
-            <Route path="logged" element={<Logged />} />
+            <Route path="director" element={<Logged />} />
+            <Route path="director/:id/edit" element={<Logged />} />
+            <Route path="posters/:id" element={<Logged />} />
             <Route path="*" element={<NotFound />} />
           </Route>
           <Route path="*" element={<NotFound />} />

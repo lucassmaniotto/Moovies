@@ -34,6 +34,14 @@ const HeaderWrapper = styled.header`
   @media screen and (max-width: 768px) {
     justify-content: center;
   }
+
+  @media screen and (max-width: 375px) {
+    position: relative;
+  }
+
+  @media screen and (max-height: 781px) {
+    position: relative;
+  }
 `;
 
 export default HeaderWrapper;

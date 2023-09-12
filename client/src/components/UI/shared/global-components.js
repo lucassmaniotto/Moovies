@@ -15,7 +15,6 @@ const H1 = styled.h1`
   font-weight: 100;
   font-family: ${titleFont};
   line-height: 1.5;
-  word-wrap: break-word;
 `;
 
 const H2 = styled.h2`

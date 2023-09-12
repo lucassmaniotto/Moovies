@@ -41,12 +41,28 @@ export const DivTitle = styled.div`
     align-self: flex-start;
   }
 
-  @media screen and (max-width: 468px) {
+  @media screen and (max-width: 611px) {
     width: 100%;
 
     h1,
     h2 {
-      height: 10%;
+      height: 20%;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      height: 1%;
+    }
+  }
+
+  @media screen and (max-width: 501px) {
+    h1,
+    h2 {
+      height: 15%;
     }
 
     h1 {
@@ -58,14 +74,30 @@ export const DivTitle = styled.div`
     }
   }
 
-  @media screen and (max-width: 346px) {
-    width: 100%;
+  @media screen and (max-width: 468px) {
+    text-align: center;
+    h1 {
+      font-size: 1.75rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 447px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 396px) {
     h1 {
       font-size: 1.5rem;
     }
 
     h2 {
-      font-size: 0.85rem;
+      display: none;
     }
   }
 `;
@@ -76,7 +108,7 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   color: ${primaryColor};
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.05rem;
   transition: color 0.3s ease-in-out;
   margin: 1rem 0 2rem 0;
@@ -87,5 +119,10 @@ export const StyledLink = styled(Link)`
 
   svg {
     margin-right: 0.5rem;
+  }
+
+  @media screen and (max-width: 468px) {
+    font-size: 1rem;
+    text-align: center;
   }
 `;

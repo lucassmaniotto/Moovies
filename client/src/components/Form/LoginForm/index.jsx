@@ -19,7 +19,7 @@ function Form() {
     try {
       dispatch(loginRequest());
       toast.success('Login efetuado com sucesso!');
-      return navigate('/private/logged');
+      return navigate('/private/director');
     } catch (err) {
       toast.error('Falha na autenticação, verifique seus dados');
       throw new Error('Authentication failed');
