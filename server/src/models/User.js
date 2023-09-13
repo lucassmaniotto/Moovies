@@ -10,11 +10,11 @@ export default class User extends Model {
           defaultValue: '',
           validate: {
             notEmpty: {
-              msg: 'Name cannot be empty',
+              msg: 'Nome não pode ser vazio',
             },
             len: {
               args: [3, 100],
-              msg: 'Name must have between 3 and 100 characters',
+              msg: 'Nome deve ter entre 3 e 100 caracteres',
             },
           },
         },
@@ -22,14 +22,14 @@ export default class User extends Model {
           type: Sequelize.STRING(100),
           defaultValue: '',
           unique: {
-            msg: 'Email already exists',
+            msg: 'Email já existe',
           },
           validate: {
             notEmpty: {
-              msg: 'Name cannot be empty',
+              msg: 'Nome não pode ser vazio',
             },
             isEmail: {
-              msg: 'Invalid email',
+              msg: 'Email inválido',
             },
           },
         },
@@ -42,11 +42,11 @@ export default class User extends Model {
           defaultValue: '',
           validate: {
             notEmpty: {
-              msg: 'Name cannot be empty',
+              msg: 'Nome não pode ser vazio',
             },
             len: {
               args: [6, 50],
-              msg: 'Name must have between 3 and 100 characters',
+              msg: 'Senha deve ter entre 6 e 50 caracteres',
             },
           },
         },

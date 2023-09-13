@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { AiOutlineMail, AiOutlineUser } from 'react-icons/ai';
 import { MdOutlineLock } from 'react-icons/md';
 import { toast } from 'react-toastify';
-
 import { useNavigate } from 'react-router-dom';
+
+import axios from '../../../services/axios';
+
 import Input from '../../Input';
 import Button from '../../Button';
 import StyledForm from './styles';
@@ -15,38 +17,45 @@ function Form() {
 
   const navigate = useNavigate();
 
+  const validateUserObject = (user) => {
+    if (!user.name || !user.email || !user.password) {
+      return toast.error('Preencha todos os campos!');
+    }
+    if (user.name.length < 3) {
+      return toast.error('O nome deve conter no mínimo 3 caracteres!');
+    }
+    if (!user.email.includes('@') || !user.email.includes('.com')) {
+      return toast.error('Insira um e-mail válido!');
+    }
+    if (user.password.length < 6) {
+      return toast.error('A senha deve conter no mínimo 6 caracteres!');
+    }
+    return null;
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-    /*
-      const user = {
-        name,
-        email,
-        password,
-      };
-    */
-    const response = {
-      // REMOVE THIS LINE LATER
-      user: {
-        name,
-        email,
-        password,
-      },
-      status: 201,
-    }; // await registerUser(user.name, user.email, user.password);
 
-    if (response.status === 201) {
-      toast.success('Usuário cadastrado com sucesso!');
-      setName('');
-      setEmail('');
-      setPassword('');
-      navigate('/login');
+    const user = {
+      name,
+      email,
+      password,
+    };
+
+    validateUserObject(user);
+
+    try {
+      await axios.post('/users', user);
+    } catch (error) {
+      if (error.response) {
+        return toast.error(error.response.data.message);
+      }
     }
-    if (response.status === 409) {
-      toast.error('E-mail já cadastrado!');
-    }
-    if (response.status === 400) {
-      toast.error('Preencha os campos corretamente!');
-    }
+    setName('');
+    setEmail('');
+    setPassword('');
+    toast.success('Usuário cadastrado com sucesso!');
+    return navigate('/login');
   };
 
   const handleNameChange = ({ target }) => {

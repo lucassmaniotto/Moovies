@@ -5,21 +5,21 @@ class UserController {
     try {
       const user = await User.create(req.body);
       const { id, name, email } = user;
-      return res.status(200).json({ id, name, email });
+      return res.status(201).json({ id, name, email });
     } catch (error) {
       return res
         .status(400)
-        .json({ error: error.message, message: 'User was not created' });
+        .json({ error: error.message, message: 'Usuário não criado' });
     }
   }
 
   async index(req, res) {
     try {
       const users = await User.findAll({ attributes: ['id', 'name', 'email'] });
-      if (!users) return res.json({ message: 'Users were not found' });
+      if (!users) return res.json({ message: 'Usuários não encontrados' });
       return res.status(200).json(users);
     } catch (error) {
-      return res.json({ message: 'Users were not found' });
+      return res.json({ message: 'Usuários não encontrados' });
     }
   }
 
@@ -27,10 +27,10 @@ class UserController {
     try {
       const user = await User.findByPk(req.params.id);
       const { id, name, email } = user;
-      if (!user) return res.json({ message: 'User not found' });
+      if (!user) return res.json({ message: 'Usuário não encontrado' });
       return res.status(200).json({ id, name, email });
     } catch (error) {
-      return res.json({ message: 'User not found' });
+      return res.json({ message: 'Usuário não encontrado' });
     }
   }
 

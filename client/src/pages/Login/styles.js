@@ -16,6 +16,7 @@ export const WrapStyled = styled.div`
   background-color: ${whiteColor};
   padding: 2rem;
   width: 50%;
+  max-width: 550px;
   margin: 5rem auto 0 auto;
 
   p {
